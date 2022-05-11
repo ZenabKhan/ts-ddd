@@ -29,5 +29,9 @@ export class Application {
         console.log("------------------After remove product----------------------");
         console.log(`Cart = ${cart}`);
         console.log("---------------------------------------------------------");
+
+        console.log("-----------------removed product names----------------------");
+        console.log(cart.getRemovedProductNames());
+        console.log("---------------------------------------------------------");
     }
 }

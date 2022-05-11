@@ -1,9 +1,10 @@
 {
-  "name": "ts-project-seed",
-  "version": "1.1.1",
-  "description": "A seed project with the initial plumbing for TypeScript.",
+  "name": "ts-ddd",
+  "version": "1.0.0",
+  "description": "Domain driven design - workshop practice repo",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "clean": "rimraf dist",
     "build": "npm run clean && npm run lint && tsc -p tsconfig.json && npm run uglify && npm run browserify",
     "uglify": "uglifyjs-folder dist --output dist/all.min.js --pattern \"**/*.js,!**/*min.js\"",
@@ -18,15 +19,13 @@
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
-    "url": "https://github.com/metadevpro/ts-project-seed"
+    "url": "https://github.com/ZenabKhan/ts-ddd"
   },
   "keywords": [
-    "typescript",
-    "scaffolding"
+    "typescript"
   ],
   "author": {
-    "name": "Pedro J. Molina",
-    "url": "http://pjmolina.com"
+    "name": "Zainab Salim"
   },
   "license": "CC0-1.0",
   "nyc": {
@@ -64,7 +63,7 @@
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "mocha": "^8.3.0",
+    "mocha": "^10.0.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",

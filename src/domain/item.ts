@@ -9,6 +9,10 @@ export class Item {
         this.quantity = quantity;
     }
 
+    getProduct(): Product {
+        return this.product;
+    }
+
     toString(): string {
         return `Item{product=${this.product}, quantity=${this.quantity}}`;
     }

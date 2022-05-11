@@ -1,16 +1,17 @@
 import { expect } from 'chai';
 import { Cart } from './cart';
+import { Item } from './item';
 import { Product } from './product';
 
 describe('Cart: ', () => {
-    it('should add product to cart', () => {
+    it('should add item to cart', () => {
         const cart = new Cart();
         const product = new Product("Some test product");
-        cart.add(product);
+        const item = new Item(product, 1);
+        cart.add(item);
 
-        const cartProducts = cart.getProducts();
+        const cartItems = cart.getItems();
 
-        expect(cartProducts.length).eql(1);
-        expect(cartProducts[0].getName()).eql("Some test product");
+        expect(cartItems.length).eql(1);
     });
 });

@@ -1,16 +1,16 @@
-import { Product } from "./product"
+import { Item } from "./item"
 export class Cart {
-    private products: Array<Product> = [];
+    private items: Array<Item> = [];
 
-    add(product: Product): void {
-        this.products.push(product);
+    add(item: Item): void {
+        this.items.push(item);
     }
 
-    getProducts(): Array<Product> {
-        return this.products;
+    getItems(): Array<Item> {
+        return this.items;
     }
 
     toString():string {
-        return `Cart{products=${this.products}}`;
+        return `Cart{items=${this.items}}`;
     }
 }

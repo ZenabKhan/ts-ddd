@@ -1,19 +1,22 @@
 import { Cart } from "../domain/cart";
+import { Item } from "../domain/item";
 import { Product } from "../domain/product";
 
 export class Application {
     static main():void {
         const cart:Cart = new Cart();
         const product:Product = new Product("Apple Pencil");
-        cart.add(product);
-        cart.add(product);
+        const item:Item = new Item(product,  2);
+
+        cart.add(item);
         
+        console.log("----------------------------------------");
         console.log(`Cart = ${cart}`);
-        const products:Array<Product> = cart.getProducts();
+        const items:Array<Item> = cart.getItems();
         
         
         console.log("----------------------------------------");
-        console.log(`products = ${products}`);
+        console.log(`items = ${items}`);
         console.log("----------------------------------------");
     }
 }
